@@ -1,0 +1,1136 @@
+20:32:41,494 root INFO ASRModel(
+  (encoder): TransformerEncoder(
+    (embed): Conv2dSubsampling(
+      (conv): Sequential(
+        (0): Conv2d(1, 256, kernel_size=(3, 3), stride=(2, 2))
+        (1): ReLU()
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+        (3): ReLU()
+      )
+      (out): Sequential(
+        (0): Linear(in_features=5120, out_features=256, bias=True)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (encoders): MultiSequential(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (6): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (7): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (8): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (9): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (10): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (11): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (after_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+  )
+  (ctc): CTC(
+    (projection): Linear(in_features=256, out_features=302, bias=True)
+    (ctc_loss): CTCLoss()
+  )
+  (stat_calculator): StatsCalculator()
+)
+20:32:41,496 root INFO Built a model with 11.46M Params
+20:32:41,501 root INFO Start to train epoch 0
+20:36:41,595 root INFO ASRModel(
+  (encoder): TransformerEncoder(
+    (embed): Conv2dSubsampling(
+      (conv): Sequential(
+        (0): Conv2d(1, 256, kernel_size=(3, 3), stride=(2, 2))
+        (1): ReLU()
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+        (3): ReLU()
+      )
+      (out): Sequential(
+        (0): Linear(in_features=5120, out_features=256, bias=True)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (encoders): MultiSequential(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (6): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (7): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (8): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (9): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (10): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (11): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (after_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+  )
+  (ctc): CTC(
+    (projection): Linear(in_features=256, out_features=302, bias=True)
+    (ctc_loss): CTCLoss()
+  )
+  (stat_calculator): StatsCalculator()
+)
+20:36:41,597 root INFO Built a model with 11.46M Params
+20:36:41,602 root INFO Start to train epoch 0
+20:42:41,125 root INFO ASRModel(
+  (encoder): TransformerEncoder(
+    (embed): Conv2dSubsampling(
+      (conv): Sequential(
+        (0): Conv2d(1, 256, kernel_size=(3, 3), stride=(2, 2))
+        (1): ReLU()
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+        (3): ReLU()
+      )
+      (out): Sequential(
+        (0): Linear(in_features=5120, out_features=256, bias=True)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (encoders): MultiSequential(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (6): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (7): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (8): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (9): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (10): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (11): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (after_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+  )
+  (ctc): CTC(
+    (projection): Linear(in_features=256, out_features=302, bias=True)
+    (ctc_loss): CTCLoss()
+  )
+  (stat_calculator): StatsCalculator()
+)
+20:42:41,126 root INFO Built a model with 11.46M Params
+20:42:41,131 root INFO Start to train epoch 0
+20:46:41,993 root INFO ASRModel(
+  (encoder): TransformerEncoder(
+    (embed): Conv2dSubsampling(
+      (conv): Sequential(
+        (0): Conv2d(1, 256, kernel_size=(3, 3), stride=(2, 2))
+        (1): ReLU()
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2))
+        (3): ReLU()
+      )
+      (out): Sequential(
+        (0): Linear(in_features=5120, out_features=256, bias=True)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (encoders): MultiSequential(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (6): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (7): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (8): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (9): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (10): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (11): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=1024, bias=True)
+          (w_2): Linear(in_features=1024, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (activation): ReLU()
+        )
+        (norm1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (after_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+  )
+  (ctc): CTC(
+    (projection): Linear(in_features=256, out_features=302, bias=True)
+    (ctc_loss): CTCLoss()
+  )
+  (stat_calculator): StatsCalculator()
+)
+20:46:41,994 root INFO Built a model with 11.46M Params
+20:46:42,0 root INFO Start to train epoch 0
+20:48:15,87 root INFO [Epoch 0, Batch=99] Train: loss=620.9030, wer=8.6734, lr=3.3333333333333337e-06
+20:49:42,717 root INFO [Epoch 0, Batch=199] Train: loss=262.5890, wer=1.0000, lr=6.6666666666666675e-06
+20:51:10,38 root INFO [Epoch 0, Batch=299] Train: loss=177.9193, wer=1.0000, lr=1e-05
+20:52:37,640 root INFO [Epoch 0, Batch=399] Train: loss=79.5441, wer=1.0000, lr=1.3333333333333335e-05
+20:54:04,984 root INFO [Epoch 0, Batch=499] Train: loss=241.8521, wer=1.0000, lr=1.666666666666667e-05
+20:55:32,671 root INFO [Epoch 0, Batch=599] Train: loss=247.9178, wer=1.0000, lr=2e-05
+20:57:00,122 root INFO [Epoch 0, Batch=699] Train: loss=226.9908, wer=1.0000, lr=2.3333333333333336e-05
+20:58:27,656 root INFO [Epoch 0, Batch=799] Train: loss=158.7560, wer=1.0000, lr=2.666666666666667e-05
+20:59:55,267 root INFO [Epoch 0, Batch=899] Train: loss=242.4170, wer=1.0000, lr=3.0000000000000004e-05
+21:01:22,708 root INFO [Epoch 0, Batch=999] Train: loss=240.8511, wer=1.0000, lr=3.333333333333334e-05
+21:02:50,194 root INFO [Epoch 0, Batch=1099] Train: loss=232.5065, wer=1.0000, lr=3.666666666666667e-05
+21:04:17,832 root INFO [Epoch 0, Batch=1199] Train: loss=222.0534, wer=1.0000, lr=4e-05
+21:05:45,288 root INFO [Epoch 0, Batch=1299] Train: loss=227.0705, wer=1.0000, lr=4.333333333333334e-05
+21:07:13,305 root INFO [Epoch 0, Batch=1399] Train: loss=194.6466, wer=1.0000, lr=4.666666666666667e-05
+21:08:40,686 root INFO [Epoch 0, Batch=1499] Train: loss=64.8471, wer=1.0000, lr=5e-05
+21:10:08,376 root INFO [Epoch 0, Batch=1599] Train: loss=213.5699, wer=1.0000, lr=5.333333333333334e-05
+21:11:36,445 root INFO [Epoch 0, Batch=1699] Train: loss=192.8051, wer=1.0000, lr=5.666666666666667e-05
+21:13:03,872 root INFO [Epoch 0, Batch=1799] Train: loss=216.5997, wer=0.9993, lr=6.000000000000001e-05
+21:14:31,609 root INFO [Epoch 0, Batch=1899] Train: loss=217.0322, wer=1.0000, lr=6.333333333333335e-05
+21:15:50,594 root INFO Start to validate epoch 0
+21:16:16,836 root INFO Epoch 00, lr=6.64e-05 | Train: loss=250.7396, wer=1.4583 | Val: loss=272.7138, wer=1.0004 | Time: this epoch 1774.84s, elapsed 1774.84s
+21:16:17,81 root INFO [info] Save model after epoch 0
+
+21:16:17,81 root INFO Start to train epoch 1
+21:17:45,598 root INFO [Epoch 1, Batch=99] Train: loss=218.6954, wer=0.9978, lr=6.966666666666668e-05
+21:19:13,6 root INFO [Epoch 1, Batch=199] Train: loss=196.0232, wer=0.9932, lr=7.300000000000001e-05
+21:20:40,598 root INFO [Epoch 1, Batch=299] Train: loss=170.9178, wer=0.9979, lr=7.633333333333335e-05
+21:22:08,281 root INFO [Epoch 1, Batch=399] Train: loss=208.5519, wer=0.9959, lr=7.966666666666669e-05
+21:23:35,825 root INFO [Epoch 1, Batch=499] Train: loss=188.1515, wer=0.9964, lr=8.300000000000001e-05
+21:25:03,751 root INFO [Epoch 1, Batch=599] Train: loss=183.4052, wer=0.9953, lr=8.633333333333335e-05
+21:26:31,536 root INFO [Epoch 1, Batch=699] Train: loss=116.6101, wer=0.9967, lr=8.966666666666669e-05
+21:27:58,941 root INFO [Epoch 1, Batch=799] Train: loss=175.5358, wer=0.9974, lr=9.300000000000001e-05
+21:29:26,547 root INFO [Epoch 1, Batch=899] Train: loss=177.1962, wer=0.9949, lr=9.633333333333335e-05
+21:30:54,460 root INFO [Epoch 1, Batch=999] Train: loss=172.3829, wer=0.9930, lr=9.966666666666669e-05
+21:32:21,944 root INFO [Epoch 1, Batch=1099] Train: loss=189.1293, wer=0.9936, lr=0.00010300000000000001
+21:33:49,893 root INFO [Epoch 1, Batch=1199] Train: loss=181.5209, wer=0.9954, lr=0.00010633333333333335
+21:35:17,714 root INFO [Epoch 1, Batch=1299] Train: loss=164.5707, wer=0.9954, lr=0.00010966666666666669
+21:36:45,484 root INFO [Epoch 1, Batch=1399] Train: loss=194.4878, wer=0.9936, lr=0.00011300000000000001
+21:38:13,155 root INFO [Epoch 1, Batch=1499] Train: loss=184.6149, wer=0.9926, lr=0.00011633333333333335
+21:39:40,848 root INFO [Epoch 1, Batch=1599] Train: loss=181.0312, wer=0.9923, lr=0.0001196666666666667
+21:41:08,359 root INFO [Epoch 1, Batch=1699] Train: loss=171.9575, wer=0.9919, lr=0.00012300000000000004
+21:42:36,125 root INFO [Epoch 1, Batch=1799] Train: loss=189.7123, wer=0.9964, lr=0.00012633333333333336
+21:44:03,658 root INFO [Epoch 1, Batch=1899] Train: loss=154.7041, wer=0.9913, lr=0.00012966666666666668
+21:45:22,406 root INFO Start to validate epoch 1
+21:45:47,792 root INFO Epoch 01, lr=0.00013273333333333335 | Train: loss=173.4377, wer=0.9956 | Val: loss=215.7187, wer=0.9939 | Time: this epoch 1770.71s, elapsed 3545.79s
+21:45:48,38 root INFO [info] Save model after epoch 1
+
+21:45:48,38 root INFO Start to train epoch 2
+21:47:16,800 root INFO [Epoch 2, Batch=99] Train: loss=168.1178, wer=0.9939, lr=0.000136
+21:48:44,684 root INFO [Epoch 2, Batch=199] Train: loss=193.7687, wer=0.9937, lr=0.00013933333333333335
+21:50:12,345 root INFO [Epoch 2, Batch=299] Train: loss=172.7880, wer=0.9952, lr=0.0001426666666666667
+21:51:40,110 root INFO [Epoch 2, Batch=399] Train: loss=165.1452, wer=0.9880, lr=0.00014600000000000003
+21:53:08,71 root INFO [Epoch 2, Batch=499] Train: loss=178.2226, wer=0.9927, lr=0.00014933333333333338
+21:54:36,163 root INFO [Epoch 2, Batch=599] Train: loss=168.2582, wer=0.9797, lr=0.0001526666666666667
+21:56:03,800 root INFO [Epoch 2, Batch=699] Train: loss=174.0709, wer=0.9933, lr=0.00015600000000000002
+21:57:31,503 root INFO [Epoch 2, Batch=799] Train: loss=151.0583, wer=0.9830, lr=0.00015933333333333338
+21:58:59,66 root INFO [Epoch 2, Batch=899] Train: loss=155.6447, wer=0.9877, lr=0.0001626666666666667
+22:00:26,294 root INFO [Epoch 2, Batch=999] Train: loss=122.0437, wer=0.9948, lr=0.00016600000000000002
+22:01:53,838 root INFO [Epoch 2, Batch=1099] Train: loss=126.8075, wer=0.9898, lr=0.00016933333333333337
+22:03:21,364 root INFO [Epoch 2, Batch=1199] Train: loss=97.9773, wer=0.9941, lr=0.0001726666666666667
+22:04:48,810 root INFO [Epoch 2, Batch=1299] Train: loss=149.0797, wer=0.9862, lr=0.00017600000000000002
+22:06:16,382 root INFO [Epoch 2, Batch=1399] Train: loss=170.0285, wer=0.9884, lr=0.00017933333333333337
+22:07:43,984 root INFO [Epoch 2, Batch=1499] Train: loss=143.7162, wer=0.9873, lr=0.0001826666666666667
+22:09:11,879 root INFO [Epoch 2, Batch=1599] Train: loss=146.6904, wer=0.9880, lr=0.00018600000000000002
+22:10:39,357 root INFO [Epoch 2, Batch=1699] Train: loss=168.2778, wer=0.9925, lr=0.00018933333333333337
+22:12:07,95 root INFO [Epoch 2, Batch=1799] Train: loss=153.8225, wer=0.9898, lr=0.0001926666666666667
+22:13:34,662 root INFO [Epoch 2, Batch=1899] Train: loss=165.8665, wer=0.9892, lr=0.00019600000000000002
+22:14:53,472 root INFO Start to validate epoch 2
+22:15:18,782 root INFO Epoch 02, lr=0.0001990666666666667 | Train: loss=152.7475, wer=0.9897 | Val: loss=189.6363, wer=0.9898 | Time: this epoch 1770.74s, elapsed 5316.78s
+22:15:19,56 root INFO [info] Save model after epoch 2
+
+22:15:19,56 root INFO Start to train epoch 3
+22:16:47,334 root INFO [Epoch 3, Batch=99] Train: loss=131.6218, wer=0.9916, lr=0.00020233333333333336
+22:18:15,135 root INFO [Epoch 3, Batch=199] Train: loss=144.5845, wer=0.9865, lr=0.00020566666666666671
+22:19:42,727 root INFO [Epoch 3, Batch=299] Train: loss=136.7659, wer=0.9793, lr=0.00020900000000000004
+22:21:10,478 root INFO [Epoch 3, Batch=399] Train: loss=26.3413, wer=1.0299, lr=0.00021233333333333336
+22:22:37,311 root INFO [Epoch 3, Batch=499] Train: loss=149.5012, wer=0.9764, lr=0.00021566666666666671
+22:24:04,23 root INFO [Epoch 3, Batch=599] Train: loss=124.0642, wer=0.9854, lr=0.00021900000000000004
+22:25:31,402 root INFO [Epoch 3, Batch=699] Train: loss=156.1584, wer=0.9805, lr=0.00022233333333333336
+22:26:58,548 root INFO [Epoch 3, Batch=799] Train: loss=141.3084, wer=0.9809, lr=0.0002256666666666667
+22:28:25,514 root INFO [Epoch 3, Batch=899] Train: loss=164.2014, wer=0.9802, lr=0.00022900000000000004
+22:29:52,626 root INFO [Epoch 3, Batch=999] Train: loss=137.4610, wer=0.9799, lr=0.00023233333333333336
+22:31:19,799 root INFO [Epoch 3, Batch=1099] Train: loss=147.6995, wer=0.9870, lr=0.0002356666666666667
+22:32:46,736 root INFO [Epoch 3, Batch=1199] Train: loss=164.3700, wer=0.9823, lr=0.00023900000000000004
+22:34:13,745 root INFO [Epoch 3, Batch=1299] Train: loss=148.7907, wer=0.9833, lr=0.00024233333333333336
+22:35:40,511 root INFO [Epoch 3, Batch=1399] Train: loss=139.6347, wer=0.9824, lr=0.0002456666666666667
+22:37:07,764 root INFO [Epoch 3, Batch=1499] Train: loss=116.7536, wer=0.9850, lr=0.00024900000000000004
+22:38:34,764 root INFO [Epoch 3, Batch=1599] Train: loss=145.3113, wer=0.9760, lr=0.00025233333333333336
+22:40:01,860 root INFO [Epoch 3, Batch=1699] Train: loss=68.7855, wer=0.9890, lr=0.0002556666666666667
+22:41:29,70 root INFO [Epoch 3, Batch=1799] Train: loss=128.7907, wer=0.9754, lr=0.00025900000000000006
+22:42:56,474 root INFO [Epoch 3, Batch=1899] Train: loss=147.1661, wer=0.9830, lr=0.0002623333333333334
+22:44:14,736 root INFO Start to validate epoch 3
+22:44:39,941 root INFO Epoch 03, lr=0.00026540000000000005 | Train: loss=140.9487, wer=0.9841 | Val: loss=174.3926, wer=1.0049 | Time: this epoch 1760.88s, elapsed 7077.94s
+22:44:39,943 root INFO Start to train epoch 4
+22:46:07,654 root INFO [Epoch 4, Batch=99] Train: loss=140.4464, wer=0.9754, lr=0.0002686666666666667
+22:47:34,780 root INFO [Epoch 4, Batch=199] Train: loss=137.3324, wer=0.9803, lr=0.000272
+22:49:01,787 root INFO [Epoch 4, Batch=299] Train: loss=62.9139, wer=0.9953, lr=0.0002753333333333333
+22:50:30,192 root INFO [Epoch 4, Batch=399] Train: loss=141.0294, wer=0.9769, lr=0.0002786666666666667
+22:51:57,492 root INFO [Epoch 4, Batch=499] Train: loss=125.2806, wer=0.9915, lr=0.0002820000000000001
+22:53:24,662 root INFO [Epoch 4, Batch=599] Train: loss=138.7517, wer=0.9755, lr=0.0002853333333333334
+22:54:52,137 root INFO [Epoch 4, Batch=699] Train: loss=113.9447, wer=0.9844, lr=0.0002886666666666667
+22:56:19,670 root INFO [Epoch 4, Batch=799] Train: loss=155.8762, wer=0.9795, lr=0.00029200000000000005
+22:57:47,129 root INFO [Epoch 4, Batch=899] Train: loss=107.9429, wer=0.9815, lr=0.0002953333333333334
+22:59:14,310 root INFO [Epoch 4, Batch=999] Train: loss=115.5358, wer=0.9763, lr=0.00029866666666666675
+23:00:41,515 root INFO [Epoch 4, Batch=1099] Train: loss=106.5278, wer=0.9784, lr=0.0003020000000000001
+23:02:08,905 root INFO [Epoch 4, Batch=1199] Train: loss=128.3752, wer=0.9779, lr=0.0003053333333333334
+23:03:36,385 root INFO [Epoch 4, Batch=1299] Train: loss=142.2010, wer=0.9758, lr=0.0003086666666666667
+23:05:04,146 root INFO [Epoch 4, Batch=1399] Train: loss=141.5182, wer=0.9782, lr=0.00031200000000000005
+23:06:31,204 root INFO [Epoch 4, Batch=1499] Train: loss=119.4927, wer=0.9830, lr=0.00031533333333333337
+23:07:58,712 root INFO [Epoch 4, Batch=1599] Train: loss=128.1855, wer=0.9725, lr=0.00031866666666666675
+23:09:26,107 root INFO [Epoch 4, Batch=1699] Train: loss=105.8839, wer=0.9847, lr=0.0003220000000000001
+23:10:54,18 root INFO [Epoch 4, Batch=1799] Train: loss=104.7436, wer=0.9892, lr=0.0003253333333333334
+23:12:21,640 root INFO [Epoch 4, Batch=1899] Train: loss=137.2080, wer=0.9766, lr=0.0003286666666666667
+23:13:39,979 root INFO Start to validate epoch 4
+23:14:05,477 root INFO Epoch 04, lr=0.0003317333333333334 | Train: loss=129.3340, wer=0.9802 | Val: loss=145.0024, wer=1.0215 | Time: this epoch 1765.53s, elapsed 8843.48s
+23:14:05,478 root INFO Start to train epoch 5
+23:15:33,415 root INFO [Epoch 5, Batch=99] Train: loss=131.7885, wer=0.9800, lr=0.00033500000000000007
+23:17:00,614 root INFO [Epoch 5, Batch=199] Train: loss=125.7227, wer=0.9870, lr=0.0003383333333333334
+23:18:27,925 root INFO [Epoch 5, Batch=299] Train: loss=104.4282, wer=0.9852, lr=0.0003416666666666667
+23:19:55,628 root INFO [Epoch 5, Batch=399] Train: loss=118.6064, wer=0.9933, lr=0.00034500000000000004
+23:21:23,355 root INFO [Epoch 5, Batch=499] Train: loss=133.8538, wer=0.9829, lr=0.00034833333333333336
+23:22:50,959 root INFO [Epoch 5, Batch=599] Train: loss=110.2756, wer=0.9871, lr=0.0003516666666666667
+23:24:18,54 root INFO [Epoch 5, Batch=699] Train: loss=121.7434, wer=0.9878, lr=0.00035500000000000006
+23:25:45,749 root INFO [Epoch 5, Batch=799] Train: loss=115.3200, wer=1.0013, lr=0.0003583333333333334
+23:27:13,102 root INFO [Epoch 5, Batch=899] Train: loss=110.0666, wer=0.9863, lr=0.0003616666666666667
+23:28:40,210 root INFO [Epoch 5, Batch=999] Train: loss=119.0779, wer=0.9765, lr=0.00036500000000000004
+23:30:07,808 root INFO [Epoch 5, Batch=1099] Train: loss=128.2811, wer=0.9697, lr=0.00036833333333333336
+23:31:35,252 root INFO [Epoch 5, Batch=1199] Train: loss=114.2866, wer=0.9900, lr=0.0003716666666666667
+23:33:02,446 root INFO [Epoch 5, Batch=1299] Train: loss=95.0520, wer=1.0086, lr=0.00037500000000000006
+23:34:29,925 root INFO [Epoch 5, Batch=1399] Train: loss=109.6199, wer=0.9854, lr=0.0003783333333333334
+23:35:57,254 root INFO [Epoch 5, Batch=1499] Train: loss=58.3952, wer=1.0140, lr=0.0003816666666666667
+23:37:24,692 root INFO [Epoch 5, Batch=1599] Train: loss=112.8562, wer=1.0048, lr=0.00038500000000000003
+23:38:51,924 root INFO [Epoch 5, Batch=1699] Train: loss=121.1827, wer=0.9821, lr=0.00038833333333333336
+23:40:19,102 root INFO [Epoch 5, Batch=1799] Train: loss=98.5393, wer=0.9922, lr=0.0003916666666666667
+23:41:46,305 root INFO [Epoch 5, Batch=1899] Train: loss=91.7600, wer=0.9953, lr=0.00039500000000000006
+23:43:05,398 root INFO Start to validate epoch 5
+23:43:31,261 root INFO Epoch 05, lr=0.0003980666666666667 | Train: loss=107.4858, wer=0.9941 | Val: loss=102.0795, wer=1.0967 | Time: this epoch 1765.78s, elapsed 10609.26s
+23:43:31,268 root INFO Start to train epoch 6
+23:44:59,627 root INFO [Epoch 6, Batch=99] Train: loss=99.7963, wer=1.0457, lr=0.0004013333333333334
+23:46:26,859 root INFO [Epoch 6, Batch=199] Train: loss=74.3809, wer=1.0331, lr=0.0004046666666666667
+23:47:54,199 root INFO [Epoch 6, Batch=299] Train: loss=87.7287, wer=0.9830, lr=0.00040800000000000005
+23:49:22,164 root INFO [Epoch 6, Batch=399] Train: loss=95.1648, wer=1.0514, lr=0.00041133333333333343
+23:50:49,665 root INFO [Epoch 6, Batch=499] Train: loss=108.5890, wer=1.0124, lr=0.00041466666666666675
+23:52:17,374 root INFO [Epoch 6, Batch=599] Train: loss=80.0421, wer=0.9942, lr=0.0004180000000000001
+23:53:44,818 root INFO [Epoch 6, Batch=699] Train: loss=99.3636, wer=1.0140, lr=0.0004213333333333334
+23:55:12,932 root INFO [Epoch 6, Batch=799] Train: loss=131.8017, wer=1.0049, lr=0.0004246666666666667
+23:56:40,759 root INFO [Epoch 6, Batch=899] Train: loss=94.9507, wer=1.0380, lr=0.00042800000000000005
+23:58:07,820 root INFO [Epoch 6, Batch=999] Train: loss=86.6487, wer=0.9947, lr=0.00043133333333333343
+23:59:35,511 root INFO [Epoch 6, Batch=1099] Train: loss=82.3330, wer=1.0371, lr=0.00043466666666666675
+00:01:03,293 root INFO [Epoch 6, Batch=1199] Train: loss=95.9118, wer=1.0044, lr=0.0004380000000000001
+00:02:31,107 root INFO [Epoch 6, Batch=1299] Train: loss=95.2972, wer=1.0111, lr=0.0004413333333333334
+00:03:59,89 root INFO [Epoch 6, Batch=1399] Train: loss=68.2553, wer=1.0276, lr=0.0004446666666666667
+00:05:27,66 root INFO [Epoch 6, Batch=1499] Train: loss=82.6979, wer=1.0113, lr=0.00044800000000000005
+00:06:54,614 root INFO [Epoch 6, Batch=1599] Train: loss=105.0598, wer=0.9823, lr=0.0004513333333333334
+00:08:22,342 root INFO [Epoch 6, Batch=1699] Train: loss=85.4716, wer=1.0315, lr=0.00045466666666666675
+00:09:49,564 root INFO [Epoch 6, Batch=1799] Train: loss=15.7622, wer=1.1554, lr=0.0004580000000000001
+00:11:17,418 root INFO [Epoch 6, Batch=1899] Train: loss=77.5362, wer=1.0065, lr=0.0004613333333333334
+00:12:36,338 root INFO Start to validate epoch 6
+00:13:01,921 root INFO Epoch 06, lr=0.00046440000000000007 | Train: loss=87.4571, wer=1.0175 | Val: loss=80.4940, wer=1.0820 | Time: this epoch 1770.65s, elapsed 12379.92s
+00:13:01,923 root INFO Start to train epoch 7
